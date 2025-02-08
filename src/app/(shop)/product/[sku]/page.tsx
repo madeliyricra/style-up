@@ -20,8 +20,8 @@ export default function ProductPage({
     const { sku } = use(params)
     const { data: product, error, isLoading } = useFetchProductById(sku)
 
-    if (isLoading) return <Loading />
     if (error) return <Error />
+    if (isLoading) return <Loading />
     if (!product) return <NotFound />
 
     const category = CATEGORIES.find(

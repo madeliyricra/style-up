@@ -6,6 +6,7 @@ import { CATEGORIES } from "@/utils/constant"
 import debounce from "lodash.debounce"
 import { IoSearch } from "react-icons/io5"
 import { useSearchProducts } from "@/hooks/useSearchProducts"
+import Error from "./error"
 
 export default function ProductListPage({
     params,
@@ -16,7 +17,13 @@ export default function ProductListPage({
     const [search, setSearch] = useState("")
     const [debouncedSearch, setDebouncedSearch] = useState("")
 
-    const { data: products, isLoading } = useSearchProducts(id, debouncedSearch)
+    const {
+        data: products,
+        isLoading,
+        error,
+    } = useSearchProducts(id, debouncedSearch)
+    
+    if (error) return <Error />
 
     const handleSearch = useCallback(
         debounce((value) => setDebouncedSearch(value), 500),
