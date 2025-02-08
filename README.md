@@ -11,6 +11,18 @@ Ensure you have the following installed before proceeding:
 -   [Node.js](https://nodejs.org/) (version 14.x or later)
 -   [npm](https://www.npmjs.com/) (version 6.x or later) or [yarn](https://yarnpkg.com/) (version 1.22.x or later)
 
+### Environment Variables
+
+To run this project, you need to set up the following environment variables in a `.env.local` file at the root of the project:
+
+- `NEXT_PUBLIC_API_URL`: The URL of the API that your application will consume.
+
+Example of a `.env.local` file:
+
+```env
+NEXT_PUBLIC_API_URL=https://api.example.com
+```
+
 ### 📥 Installation
 
 1. **Clone the repository:**

@@ -15,11 +15,7 @@ export const fetchProductsByCategory = async (
 
         const products = await response.json()
 
-        return products.filter((product: { name: string }) =>
-            product.name
-                .toLowerCase()
-                .includes(search ? search.toLowerCase() : "")
-        )
+        return products
     } catch (error) {
         console.error(error)
         throw error
