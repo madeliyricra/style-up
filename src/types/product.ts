@@ -1,5 +1,5 @@
 interface Product {
-    slug: string
+    sku: string
     name: string
     category: string
     brand: string

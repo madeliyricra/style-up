@@ -15,10 +15,10 @@ import { NextSeo } from "next-seo"
 export default function ProductPage({
     params,
 }: {
-    params: Promise<{ slug: string }>
+    params: Promise<{ sku: string }>
 }) {
-    const { slug } = use(params)
-    const { data: product, error, isLoading } = useFetchProductById(slug)
+    const { sku } = use(params)
+    const { data: product, error, isLoading } = useFetchProductById(sku)
 
     if (isLoading) return <Loading />
     if (error) return <Error />

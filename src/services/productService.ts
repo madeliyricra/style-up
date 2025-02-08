@@ -43,9 +43,9 @@ export const fetchProductsByRecommended = async (
     }
 }
 
-export const fetchProduct = async (slug: string): Promise<Product> => {
+export const fetchProduct = async (sku: string): Promise<Product> => {
     try {
-        const response = await fetch(`${API_URL}/products?slug=${slug}`)
+        const response = await fetch(`${API_URL}/products?sku=${sku}`)
         if (!response.ok) {
             throw new Error("Error al obtener usuario")
         }

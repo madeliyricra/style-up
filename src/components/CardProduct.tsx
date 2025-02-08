@@ -19,7 +19,7 @@ export const CardProduct = ({ product }: { product: Product }) => {
             </div>
             <article className="mt-4 px-5 pb-5">
                 <Link
-                    href={`/product/${product.slug}`}
+                    href={`/product/${product.sku}`}
                     className="cursor-pointer hover:underline"
                 >
                     <h5

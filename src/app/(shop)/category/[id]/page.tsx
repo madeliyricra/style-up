@@ -60,7 +60,7 @@ export default function ProductListPage({
                           ))
                         : products?.map((product) => (
                               <CardProduct
-                                  key={product.slug}
+                                  key={product.sku}
                                   product={product}
                               />
                           ))}
