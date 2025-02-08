@@ -1,4 +1,4 @@
-interface Product {
+export default interface Product {
     sku: string
     name: string
     category: string
@@ -12,5 +12,3 @@ interface Product {
     sizes: string[]
     gender: string
 }
-
-export default Product
