@@ -1,16 +1,15 @@
-import { Header } from "@/components"
+import { Header, Footer } from "@/components"
 
 export default function ShopLayout({
-  children,
+    children,
 }: Readonly<{
-  children: React.ReactNode
+    children: React.ReactNode
 }>) {
-  return (
-    <>
-      <Header />
-      <main className="min-h-screen">
-        {children}
-      </main>
-    </>
-  )
+    return (
+        <>
+            <Header />
+            <main className="min-h-screen max-w-7xl mx-auto ">{children}</main>
+            <Footer />
+        </>
+    )
 }

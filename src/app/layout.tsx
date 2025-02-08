@@ -1,9 +1,11 @@
 import type { Metadata } from "next"
-import "./globals.css"
+import ReactQueryProviderder from "./providers/react-query-provider"
 import { openSans } from "../config/fonts"
+import "./globals.css"
+import { NAME } from "@/utils/constant"
 
 export const metadata: Metadata = {
-    title: "Home | StyleUp",
+    title: NAME,
     description: "Tienda de ropa"
 }
 
@@ -17,7 +19,7 @@ export default function RootLayout({
             <body
                 className={`${openSans.className} antialiased`}
             >
-                {children}
+                <ReactQueryProviderder>{children}</ReactQueryProviderder>
             </body>
         </html>
     )
