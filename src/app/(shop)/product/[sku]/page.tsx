@@ -101,7 +101,7 @@ export default function ProductPage({
                                         Tallas:
                                     </span>
                                     <div className="flex items-center gap-2">
-                                        {product.sizes.map((size) => (
+                                        {product.sizes.map((size: string) => (
                                             <span
                                                 key={size}
                                                 className="bg-gray-100 text-gray-600 text-xs font-medium px-2.5 py-0.5 rounded-full"
