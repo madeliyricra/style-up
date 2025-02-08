@@ -1,5 +1,4 @@
-/* eslint-disable @typescript-eslint/no-empty-interface */
-export default interface Product {
+export interface Product {
     sku: string
     name: string
     category: string
