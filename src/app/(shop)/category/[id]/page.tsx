@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useCallback, use } from "react"
+import { useState, use } from "react"
 import { CardProduct, Skeleton } from "@/components"
 import { CATEGORIES } from "@/utils/constant"
 import debounce from "lodash.debounce"
@@ -25,10 +25,7 @@ export default function ProductListPage({
     
     if (error) return <Error />
 
-    const handleSearch = useCallback(
-        debounce((value) => setDebouncedSearch(value), 500),
-        []
-    )
+    const handleSearch = debounce((value) => setDebouncedSearch(value), 500)
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setSearch(e.target.value)
