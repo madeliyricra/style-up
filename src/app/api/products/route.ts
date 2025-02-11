@@ -177,6 +177,7 @@ const products = [
 export async function GET(req: Request) {
     const { searchParams } = new URL(req.url)
     const category = searchParams.get("category")
+    const sku = searchParams.get("sku")
     const query = searchParams.get("q")?.toLowerCase()
 
     let filteredProducts = products
@@ -184,6 +185,12 @@ export async function GET(req: Request) {
     if (category) {
         filteredProducts = filteredProducts.filter(
             (product) => product.category === category
+        )
+    }
+
+    if (sku) {
+        filteredProducts = filteredProducts.filter(
+            (product) => product.sku === sku
         )
     }
 
